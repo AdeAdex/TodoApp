@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="fontawesome-free-6.1.1-web/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="todoProMax.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <title>Todo Pro Max</title>
+  </head>
+  <body class="px-3 dashboard-body" onload="displayTodo()">
+
+    <div
+      class="offcanvas offcanvas-start bg-black"
+      data-bs-scroll="true"
+      tabindex="-1"
+      id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+          
+        </h5>
+        <i class="fas fa-chevron-left fs-1 text-white" data-bs-dismiss="offcanvas"
+        aria-label="Close"></i>
+      </div>
+      <div class="offcanvas-body" style="padding-left: 40px;">
+        <img src="pic/avatar.png" style="width: 100px; height: 100px;" alt="" id="img">
+        <div id="offcanvasName" class="fw-bold text-light mt-3 mb-5" style="font-size: 30px;"></div>
+        <div class="d-flex gap-4 text-capitalize my-4 text-light">
+          <i class="fas fa-bookmark fs-1 text-muted"></i>
+          <h3>template</h3>
+        </div>
+        <div class="d-flex gap-4 text-capitalize my-4 text-light">
+          <i class="fas fa-th-large fs-1 text-muted"></i>
+          <h3>category</h3>
+        </div>
+        <div class="d-flex gap-4 text-capitalize my-4 text-light">
+          <i class="fas fa-external-link fs-1 text-muted"></i>
+          <h3>analytics</h3>
+        </div>
+        <div class="d-flex gap-4 text-capitalize my-4 text-light">
+          <i class="fas fa-gear fs-1 text-muted"></i>
+          <h3>settings</h3>
+        </div>
+        <div class="text-capitalize text-white position-absolute" style="bottom: 50px;">consistency</div>
+      </div>
+    </div>
+
+    <div id="rulesContainer">
+      <div id="rulesModal">
+        <div class="rules-modal-content">
+          <div class="rules-modal-header">
+            <h2>Select An Habit Template</h2>
+            <button
+              class="rules-modal-close"
+              id="closeBtn"
+              onclick="closeSaveNameModal()"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="rules-modal-body">
+            <div class="d-flex justify-content-between get-started w-100">
+              <div
+                id="workout"
+                class="object-container"
+                onclick="myHabit(workout.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/images (39).jpeg" alt="" />
+                </div>
+              </div>
+              <div
+                id="eatFood"
+                class="object-container"
+                onclick="myHabit(eatFood.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/images (46).jpeg" alt="" />
+                </div>
+              </div>
+              <div
+                id="music"
+                class="object-container"
+                onclick="myHabit(music.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/realistic-microphone-png.webp" alt="" />
+                </div>
+              </div>
+              <div
+                id="artDesign"
+                class="object-container"
+                onclick="myHabit(artDesign.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/images (49).jpeg" alt="" />
+                </div>
+              </div>
+              <div
+                id="travelling"
+                class="object-container"
+                onclick="myHabit(travelling.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/images (51).jpeg" alt="" />
+                </div>
+              </div>
+              <div
+                id="readBook"
+                class="object-container"
+                onclick="myHabit(readBook.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/images (52).jpeg" alt="" />
+                </div>
+              </div>
+              <div
+                id="gaming"
+                class="object-container"
+                onclick="myHabit(gaming.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/images (55).jpeg" alt="" />
+                </div>
+              </div>
+              <div
+                id="mechanic"
+                class="object-container"
+                onclick="myHabit(mechanic.innerHTML)"
+              >
+                <div class="">
+                  <img src="pic/images (58).jpeg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New Todo</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body gap-3 my-5">
+            <img src="pic/avatar.png" class="avatar" alt="" onclick="rules()" />
+            <input
+              type="text"
+              name=""
+              id="title"
+              class="form-control my-3 py-3 text-capitalize"
+              placeholder="Enter New Todo Title"
+            />
+            <input
+              type="text"
+              name=""
+              id="category"
+              class="form-control my-3 py-3 text-capitalize"
+              placeholder="Enter New Todo Category"
+            />
+            <input
+              type="date"
+              name=""
+              id="time"
+              class="form-control my-3 py-3 text-capitalize"
+              placeholder="Enter New Todo Time"
+            />
+          </div>
+          <div class="modal-footer">
+            <button class="warning" onclick="editTodo()" data-bs-dismiss="modal">
+              <i class="fas fa-edit fs-3"></i>
+            </button>
+            <!-- <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button> -->
+            <button type="button" class="btn btn-primary" onclick="addTodo()" data-bs-dismiss="modal">
+              Add Todo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <i
+      class="fas fa-plus-circle text-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    ></i>
+    <div class="w-100" id="dashContent">
+    <div class="w-100">
+      <nav
+        class="fs-1 d-flex justify-content-between mb-4 text-white position-fixed"
+      >
+        <i
+          class="fas fa-navicon mt-auto"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+        ></i>
+        <div id="daysTime" class="mt-auto"></div>
+        <i class="fas fa-calendar mt-auto fs"></i>
+      </nav>
+    </div>
+    <div class="w-100 d-flex justify-content-between top-div">
+      <div class="cicle-div">
+        <div class="mum1"></div>
+        <div class="mum2"></div>
+        <div class="mum3"></div>
+      </div>
+      <ul class="w-50 my-auto fs-3 text-white">
+        <li>Inbox</li>
+        <li>Meetings</li>
+        <li>Trip</li>
+      </ul>
+    </div>
+    <div id="disp" class="my-4 text-light text-capitalize"></div>
+    <div id="day" class="text-light fs-4 mb-2"></div>
+      
+    </div>
+    <div id="alertMessage" class="alert text-capitalize fs-2 text-light d-flex justify-content-center"></div>
+    <div id="dispTodo"></div>
+  </div>
+    <script src="todoProMax.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+  </body>
+</html>

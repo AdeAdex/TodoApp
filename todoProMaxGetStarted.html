@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="fontawesome-free-6.1.1-web/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="todoProMax.css" />
+    <title>Todo Pro Max</title>
+  </head>
+  <body >
+    <div class="mt-1 p-4">
+      <div class="mb-4">
+        <h1>Choose habit</h1>
+        <span>Choose your daily habits, you can choose more than one</span>
+      </div>
+      <div class="d-flex justify-content-between get-started w-100 gap-4">
+        <div
+          id="workout"
+          class="object-container"
+          onclick="myHabit(workout.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/images (39).jpeg" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Work Out</div>
+          <div id="myTime"></div>
+        </div>
+        <div
+          id="eatFood"
+          class="object-container"
+          onclick="myHabit(eatFood.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/images (46).jpeg" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Eat Food</div>
+          <div id="myTime"></div>
+        </div>
+        <div
+          id="music"
+          class="object-container"
+          onclick="myHabit(music.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/realistic-microphone-png.webp" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Music</div>
+          <div id="myTime"></div>
+        </div>
+        <div
+          id="artDesign"
+          class="object-container"
+          onclick="myHabit(artDesign.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/images (49).jpeg" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Art & Design</div>
+          <div id="myTime"></div>
+        </div>
+        <div
+          id="travelling"
+          class="object-container"
+          onclick="myHabit(travelling.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/images (51).jpeg" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Travelling</div>
+          <div id="myTime"></div>
+        </div>
+        <div
+          id="readBook"
+          class="object-container"
+          onclick="myHabit(readBook.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/images (52).jpeg" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Read Book</div>
+          <div id="myTime"></div>
+        </div>
+        <div
+          id="gaming"
+          class="object-container"
+          onclick="myHabit(gaming.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/images (55).jpeg" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Gaming</div>
+          <div id="myTime"></div>
+        </div>
+        <div
+          id="mechanic"
+          class="object-container"
+          onclick="myHabit(mechanic.innerHTML)"
+        >
+          <div class="d-flex gap-4">
+            <img src="pic/images (58).jpeg" alt="" />
+            <i class="fas fa-check-circle fs-1 text-end"></i>
+          </div>
+          <div>Mechanic</div>
+          <div id="myTime"></div>
+        </div>
+        
+      </div>
+      <button
+        class="btn btn-primary form-control mt-3 p-3"
+        onclick="next(`${window.location.href = 'todoProMaxDashboard.html'}`)"
+      >
+        Get Started
+      </button>
+    </div>
+    <script src="todoProMax.js"></script>
+  </body>
+</html>

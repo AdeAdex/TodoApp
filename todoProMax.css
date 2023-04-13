@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+.dashboard-body {
+  background-color: #000000;
+}
+
+.offcanvas {
+  width: 80% !important;
+  background-color: rgb(2, 2, 66) !important;
+}
+/* #taken {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: green;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+} */
+
+.sign-up-btn {
+  margin: 0px auto;
+}
+
+.get-started {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.object-container {
+  width: 46%;
+  border: 1px solid gray;
+  display: grid;
+  justify-content: center;
+  padding: 8px 0px;
+  border-radius: 5px;
+}
+.object-container img {
+  width: 50px;
+  height: 40px;
+  object-fit: fill;
+}
+
+#dispTodo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gen-todo {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  border: 1px solid gray;
+  padding: 1px 2px 8px 15px;
+  border-radius: 10px;
+  background-color: #222228;
+}
+
+#alertMessage {
+  background-color: black;
+}
+
+.fa-chevron-left {
+  border: 1px solid blue;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 10px;
+  transition: transform 0.7s ease-in-out;
+}
+
+.fa-chevron-left:hover {
+  transform: rotate(360deg);
+}
+
+.gen-todo img {
+  width: 30px;
+  height: 30px;
+}
+
+.todo-time {
+  width: 50%;
+  border-radius: 30px;
+}
+.todo-time:nth-child(even) {
+  background-color: #38242c;
+  color: #d63e5e;
+}
+.todo-time:nth-child(odd) {
+  background-color: #29373d;
+  color: #59d5d8;
+}
+/* .todo-time:nth-child() {
+  background-color: #934C38;
+  color: #FF7649;
+} */
+
+#imgDiv {
+  width: 100%;
+  height: auto;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.each-habit {
+  width: 45%;
+  height: auto;
+  padding: 1px 2px 8px 15px;
+  gap: 3px;
+}
+
+#imgDiv img {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+
+.each-habit div {
+  margin-top: 20px;
+}
+
+nav {
+  width: 94%;
+  height: 60px;
+  z-index: 1;
+  top: 0;
+  background-color: black;
+}
+
+.fa-plus-circle {
+  font-size: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.cicle-div {
+  width: 46%;
+  height: 100%;
+  /* border: 1px solid yellow; */
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.mum1 {
+  display: flex;
+  width: 55%;
+  height: 100%;
+  border-width: 10%;
+  border-top: 7px solid blue;
+  border-left: 5px solid black;
+  border-right: 7px solid blue;
+  border-bottom: 7px solid blue;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: rotate(50deg);
+}
+.mum2 {
+  display: flex;
+  width: 40%;
+  height: 70%;
+  border-top: 7px solid orangered;
+  border-left: 5px solid black;
+  border-right: 7px solid orangered;
+  border-bottom: 7px solid orangered;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  transform: rotate(50deg);
+}
+
+.mum3 {
+  display: flex;
+  width: 25%;
+  height: 43%;
+  border-top: 7px solid cyan;
+  border-left: 5px solid black;
+  border-right: 7px solid cyan;
+  border-bottom: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  transform: rotate(50deg);
+}
+
+.top-div {
+  height: 100px;
+  background-color: #222228;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 100px;
+}
+
+ul {
+  list-style: none;
+  font-weight: bold;
+}
+
+ul li:first-child::before {
+  content: "\2022";
+  color: blue;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul li:nth-child(2)::before {
+  content: "\2022";
+  color: orangered;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+ul li:nth-child(3)::before {
+  content: "\2022";
+  color: cyan;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.actionBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.warning {
+  border-radius: 50%;
+  background-color: rgb(211, 204, 204);
+  color: magenta;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.danger {
+  border-radius: 50%;
+  background-color: rgb(211, 204, 204);
+  color: red;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.warning:hover,
+.danger:hover {
+  color: black;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+#rulesModal .get-started {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+#rulesModal .object-container {
+  width: 20%;
+  border: 1px solid gray;
+  padding: 8px 0px;
+  border-radius: 5px;
+}
+#rulesModal .object-container img {
+  width: 50px;
+  height: 40px;
+  object-fit: fill;
+}
+
+#rulesModal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(3, 3, 31, 0.4);
+}
+
+.rules-modal-content {
+  position: relative;
+  background-color: brown;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 100%;
+  border-radius: 10px;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.rules-modal-content {
+  height: 100%;
+  background-color: dimgray;
+  margin: auto 0px;
+  overflow-y: auto;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.rules-modal-close {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
+#rulesModal h2 {
+  margin: auto 0px;
+}
+
+.rules-modal-header {
+  padding: 0px 16px;
+  background-color: rgb(1, 2, 41);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rules-modal-header {
+  background-color: darkcyan;
+  padding: 16px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+@media screen and (min-width: 600px) {
+  #rulesModal {
+    position: unset;
+  }
+}
+input[type="radio"]{
+  accent-color:green;
+}
