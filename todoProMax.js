@@ -197,10 +197,12 @@ function displayTodo() {
   currentUserTodo.reverse()
   for (let index = 0; index < currentUserTodo.length; index++) {
     dispTodo.innerHTML += `
-    <div class="gen-todo">
+    <div class="gen-todo flex-column">
+    <div class="d-flex">
     <h3 class="text-uppercase text-light d-flex my-auto"> <input type="radio" class="mx-3"> ${currentUserTodo[index].todoTitle}</h3>
   <h6 class="text-light text-capitalize"> ${currentUserTodo[index].todoCategory}</h6>
   <h6 class="text-capitalize d-flex justify-content-center py-2 my-3 todo-time"> ${currentUserTodo[index].todoTime}</h6>
+    </div>
   <div class= "actionBtn">
   <button class="warning" data-bs-toggle="modal"
   data-bs-target="#exampleModal" onclick="showPreviousData(${index})"><i class="fas fa-edit fs-3" ></i></button>
