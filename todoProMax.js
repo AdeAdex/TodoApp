@@ -205,7 +205,7 @@ function displayTodo() {
     </div>
   <div class= "actionBtn">
   <button class="warning" data-bs-toggle="modal"
-  data-bs-target="#exampleModal" onclick="showPreviousData(${index})"><i class="fas fa-edit fs-3" ></i></button>
+  data-bs-target="#editModal" onclick="showPreviousData(${index})"><i class="fas fa-edit fs-3" ></i></button>
   <button class="danger" onclick="delTodo(${index})"><i class="fas fa-trash fs-3"></i></button>
   </div>
     </div>

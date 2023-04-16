@@ -189,18 +189,58 @@
             />
           </div>
           <div class="modal-footer">
-            <button class="warning" onclick="editTodo()" data-bs-dismiss="modal">
-              <i class="fas fa-edit fs-3"></i>
-            </button>
-            <!-- <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button> -->
             <button type="button" class="btn btn-primary" onclick="addTodo()" data-bs-dismiss="modal">
               Add Todo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">New Todo</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body gap-3 my-5">
+            <img src="pic/avatar.png" class="avatar" alt="" onclick="rules()" />
+            <input
+              type="text"
+              name=""
+              id="title"
+              class="form-control my-3 py-3 text-capitalize"
+              placeholder="Enter New Todo Title"
+            />
+            <input
+              type="text"
+              name=""
+              id="category"
+              class="form-control my-3 py-3 text-capitalize"
+              placeholder="Enter New Todo Category"
+            />
+            <input
+              type="date"
+              name=""
+              id="time"
+              class="form-control my-3 py-3 text-capitalize"
+              placeholder="Enter New Todo Time"
+            />
+          </div>
+          <div class="modal-footer">
+            <button class="warning" onclick="editTodo()" data-bs-dismiss="modal">
+              <i class="fas fa-edit fs-3"></i>
             </button>
           </div>
         </div>
